@@ -1,0 +1,164 @@
+:root {
+
+--violet: #3A3042;   
+--clay:   #DB9D47;   
+--coral:  #FF784F;   
+--peach:  #FFE19C;   
+--radius: 0.5rem;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.bold-text {
+    font-weight: bold;
+}
+
+.button {
+    background-color: #3A3042;
+    width: 100%;
+}
+/* Links */
+a {
+  color: var(--violet);
+}
+
+/* Shows keyboard users where they are */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 2px;
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;                 
+    margin: 0 auto;                    
+    padding: 1.5rem 1rem;
+}
+
+.section-title {margin-left: 30px;}
+
+.container2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;   
+    justify-content: space-around;  
+}
+
+.box{
+    width: 1;
+    margin: 30px;
+    box-sizing: border-box;
+}
+/* FORM */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;                    
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.required {
+  font-weight: normal;
+  color: var(--muted);
+}
+
+.hint {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+#form-message {
+    margin-top: 1rem;
+}
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;                       
+  padding: 0.75rem;                  
+  font: inherit;                    
+  color: var(--text);
+  background: #FFFFFF;
+  border: 1px solid var(--violet);
+  border-radius: var(--radius);
+}
+
+textarea {
+  resize: vertical;                 
+}
+
+/* Shows red border on the text area when the user typed invalid information. */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: var(--error);
+}
+
+
+/* BUTTONS */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: var(--violet);
+  border: 2px solid var(--violet);
+  border-radius: var(--radius);
+  cursor: pointer;                  
+}
+
+/* Button color changes when cursor hovers above it. */
+.button:hover {
+  background: var(--clay);
+  border-color: var(--clay);
+}
+
+@media (min-width: 48em) {
+
+    .container2 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1rem 2 rem;
+    }
+  main {
+    padding: 2rem;
+    max-width: 1440px;
+  }
+  .button {
+    background-color: #3A3042;
+    width: 33%;
+}
+.box{
+    width: 50%;
+    margin: 30px;
+    box-sizing: border-box;
+
+}
+textarea::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+}
+/* For visitors who ask to limit animation. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
