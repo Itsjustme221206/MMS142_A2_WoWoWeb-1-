@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Everyday Comfort Tee | WearHaus</title>
+  <meta name="description" content="Everyday Comfort Tee, ₱499. Pick your size and quantity, then send your order by email. No online payment needed.">
+  <link rel="icon" href="../images/logo.png">
+
+  <!--These are the Fonts from the brand kit-Alice (headings) and Open Sans (body)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
+
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/dont-be-late.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!--HEADER-->
+  <nav class="navbar md:navbar-expand site-header" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img class="brand-logo" src="../images/logo.png" alt="WearHaus home" width="344" height="203">
+      </a>
+
+      <button class="btn-icon navbar-toggler" type="button"
+              data-bs-toggle="drawer" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+
+      <dialog class="drawer drawer-end" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="mainNavLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body">
+          <ul class="nav navbar-nav md:ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html#products">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item nav-cta"><a class="btn-solid theme-primary btn-wh btn-wh-sm" href="../index.html#products">Shop Now</a></li>
+          </ul>
+        </div>
+      </dialog>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="container product-page">
+      <p class="back-wrap"><a class="back-link" href="../index.html#products">&larr; Back to shop</a></p>
+
+      <div class="product-layout">
+        <figure class="img-frame product-photo">
+          <img src="../images/everyday-comfort.png"
+               alt="White Everyday Comfort Tee with a sunset and palm trees graphic"
+               width="900" height="877">
+        </figure>
+
+        <div class="product-detail">
+          <h1 class="product-title">Everyday Comfort Tee</h1>
+          <p class="product-price-lg">₱499</p>
+          <p class="product-desc">A soft, easygoing tee made for everyday wear. Pick your size and quantity, and what you see is what you get.</p>
+
+          <form id="order-form" novalidate data-product="Everyday Comfort Tee" data-price="499" aria-describedby="order-help">
+            <p id="order-help" class="order-help">Choose a size and quantity, then press Order now. Your email app opens with your order already written. No payment is needed now.</p>
+
+            <fieldset class="field-block">
+              <legend class="field-label">Size</legend>
+              <div class="size-group">
+                <input type="radio" class="vh size-input" name="size" id="size-s" value="S" aria-describedby="size-error">
+                <label class="size-btn" for="size-s"><span class="vh">Size </span>S</label>
+                <input type="radio" class="vh size-input" name="size" id="size-m" value="M" aria-describedby="size-error">
+                <label class="size-btn" for="size-m"><span class="vh">Size </span>M</label>
+                <input type="radio" class="vh size-input" name="size" id="size-l" value="L" aria-describedby="size-error">
+                <label class="size-btn" for="size-l"><span class="vh">Size </span>L</label>
+                <input type="radio" class="vh size-input" name="size" id="size-xl" value="XL" aria-describedby="size-error">
+                <label class="size-btn" for="size-xl"><span class="vh">Size </span>XL</label>
+              </div>
+              <p class="field-error" id="size-error" hidden></p>
+            </fieldset>
+
+            <div class="field-block">
+              <label for="quantity" class="field-label">Quantity</label>
+              <div class="qty-group">
+                <button type="button" class="qty-btn" id="qty-minus" aria-label="Decrease quantity">&minus;</button>
+                <input type="number" class="qty-input" id="quantity" name="quantity" value="1" min="1" max="20" inputmode="numeric" aria-describedby="qty-error">
+                <button type="button" class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+              </div>
+              <p class="field-error" id="qty-error" hidden></p>
+            </div>
+
+            <fieldset class="field-block">
+              <legend class="field-label">Your details</legend>
+              <p id="details-help" class="order-help">All fields are required. We use them only to confirm and deliver your order.</p>
+              <div class="field-row">
+                <label for="od-name" class="field-label">Full name</label>
+                <input type="text" class="text-field" id="od-name" name="name" autocomplete="name" required aria-describedby="od-name-error">
+                <p class="field-error" id="od-name-error" hidden></p>
+              </div>
+              <div class="field-row">
+                <label for="od-email" class="field-label">Email</label>
+                <input type="email" class="text-field" id="od-email" name="email" autocomplete="email" placeholder="name@email.com" required aria-describedby="od-email-error">
+                <p class="field-error" id="od-email-error" hidden></p>
+              </div>
+              <div class="field-row">
+                <label for="od-phone" class="field-label">Phone number</label>
+                <input type="tel" class="text-field" id="od-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+63 917 123 4567" required aria-describedby="od-phone-error">
+                <p class="field-error" id="od-phone-error" hidden></p>
+              </div>
+              <div class="field-row">
+                <label for="od-address" class="field-label">Delivery address</label>
+                <textarea class="text-field" id="od-address" name="address" rows="3" autocomplete="street-address" placeholder="House or unit number, street, barangay, city, province" required aria-describedby="od-address-error"></textarea>
+                <p class="field-error" id="od-address-error" hidden></p>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn-solid theme-primary btn-wh btn-wh-lg order-btn" id="order-btn">Order now</button>
+            <p id="order-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--FOOTER-->
+  <footer class="site-footer mt-auto">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html"><img class="footer-logo" src="../images/logo.png" alt="WearHaus home" width="344" height="203" loading="lazy"></a>
+          <p class="footer-tagline">Quality And Trendy T-Shirts For All Ages.</p>
+        </div>
+
+        <div class="footer-links-col">
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#products">Shop</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-legal-col">
+          <h2 class="footer-heading">Legal</h2>
+          <ul class="footer-list footer-legal">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="mailto:hello@examplewebsite142.com">hello@examplewebsite142.com</a></li>
+          </ul>
+        </div>
+
+        <p class="footer-copy">&copy; <span id="year">2026</span> WearHaus. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!--Bootstrap JavaScript mobile phone menu-->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/dont-be-late.js"></script>
+</body>
+</html>
