@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WearHaus | Quality and Trendy T-Shirts for All Ages</title>
+  <meta name="description" content="WearHaus is a small startup making quality, trendy t-shirts for all ages. Pick your tee, choose your size and quantity, and order by email.">
+  <link rel="icon" href="images/logo.png">
+
+  <!--These are the Fonts from the brand kit-Alice (headings) and Open Sans (body)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
+
+  <link href="css/style.css" rel="stylesheet"> 
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!--HEADER-->
+  <nav class="navbar md:navbar-expand site-header" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img class="brand-logo" src="images/logo.png" alt="WearHaus home" width="344" height="203">
+      </a>
+
+      <button class="btn-icon navbar-toggler" type="button"
+              data-bs-toggle="drawer" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+
+      <dialog class="drawer drawer-end" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="mainNavLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body">
+          <ul class="nav navbar-nav md:ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#products">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="html/contact.html">Contact</a></li>
+            <li class="nav-item nav-cta"><a class="btn-solid theme-primary btn-wh btn-wh-sm" href="index.html#products">Shop Now</a></li>
+          </ul>
+        </div>
+      </dialog>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!--HERO-->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <h1 class="hero-title" id="hero-title">Quality and Trendy <span class="nowrap">T-Shirts</span> for All Ages</h1>
+        <p class="hero-text">Comfortable and beautiful designs, made for everyday wear.</p>
+        <a class="btn-solid theme-primary btn-wh btn-wh-lg hero-btn" href="#products">See Tees</a>
+        <figure class="img-frame hero-img">
+          <img src="images/everyday-comfort.png"
+               alt="White Everyday Comfort Tee with a sunset and palm trees graphic"
+               width="900" height="877">
+        </figure>
+      </div>
+    </section>
+
+    <!--OUR TEES the 3 products-->
+    <section class="section" id="products" aria-labelledby="tees-title">
+      <div class="container">
+        <h2 class="section-title" id="tees-title">Our Tees</h2>
+
+        <div class="row g-7">
+          <!--Product 1 dont-be-late-->
+          <div class="col-12 md:col-4">
+            <article class="product-card">
+              <a class="img-frame product-media" href="html/dont-be-late.html" tabindex="-1">
+                <img src="images/dont-be-late.png"
+                     alt="White Don't Be Late Tee with a vintage stopwatch graphic"
+                     width="900" height="877" loading="lazy">
+              </a>
+              <div class="product-info">
+                <div class="product-text">
+                  <h3 class="product-name">Don’t Be Late Tee</h3>
+                  <p class="product-price">₱499</p>
+                </div>
+                <a class="btn-solid theme-primary btn-wh btn-wh-md" href="html/dont-be-late.html"
+                   aria-label="View Don’t Be Late Tee">View Tee</a>
+              </div>
+            </article>
+          </div>
+
+          <!--Product 2 everyday-comfort-->
+          <div class="col-12 md:col-4">
+            <article class="product-card">
+              <a class="img-frame product-media" href="html/everyday-comfort.html" tabindex="-1">
+                <img src="images/everyday-comfort.png"
+                     alt="White Everyday Comfort Tee with a sunset and palm trees graphic"
+                     width="900" height="877" loading="lazy">
+              </a>
+              <div class="product-info">
+                <div class="product-text">
+                  <h3 class="product-name">Everyday Comfort Tee</h3>
+                  <p class="product-price">₱499</p>
+                </div>
+                <a class="btn-solid theme-primary btn-wh btn-wh-md" href="html/everyday-comfort.html"
+                   aria-label="View Everyday Comfort Tee">View Tee</a>
+              </div>
+            </article>
+          </div>
+
+          <!--Product 3 do-good-work-->
+          <div class="col-12 md:col-4">
+            <article class="product-card">
+              <a class="img-frame product-media" href="html/do-good-work.html" tabindex="-1">
+                <img src="images/do-good-work.png"
+                     alt="White Do Good Work Tee with a night city skyline and workers graphic"
+                     width="900" height="878" loading="lazy">
+              </a>
+              <div class="product-info">
+                <div class="product-text">
+                  <h3 class="product-name">Do Good Work Tee</h3>
+                  <p class="product-price">₱499</p>
+                </div>
+                <a class="btn-solid theme-primary btn-wh btn-wh-md" href="html/do-good-work.html"
+                   aria-label="View Do Good Work Tee">View Tee</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--ABOUT US-->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 class="section-title" id="about-title">About Us</h2>
+        <p class="about-text">WearHaus is a small startup company, passionate in designing quality t-shirts for all ages. Choose your size and quantity, and expect that what you see is what you get.</p>
+        <p class="about-text about-more" id="about-more" hidden>To order, open a tee, pick your size and quantity, and send your order by email. No online payment is needed.</p>
+        <button class="learn-more" type="button" aria-expanded="false" aria-controls="about-more" data-more-label="Learn more →" data-less-label="Show less ←">Learn more →</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer class="site-footer mt-auto">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html"><img class="footer-logo" src="images/logo.png" alt="WearHaus home" width="344" height="203" loading="lazy"></a>
+          <p class="footer-tagline">Quality And Trendy T-Shirts For All Ages.</p>
+        </div>
+
+        <div class="footer-links-col">
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Shop</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="html/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-legal-col">
+          <h2 class="footer-heading">Legal</h2>
+          <ul class="footer-list footer-legal">
+            <li><a href="html/privacy.html">Privacy Policy</a></li>
+            <li><a href="mailto:hello@examplewebsite142.com">hello@examplewebsite142.com</a></li>
+          </ul>
+        </div>
+
+        <p class="footer-copy">&copy; <span id="year">2026</span> WearHaus. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!--Bootstrap JavaScript mobile phone menu-->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
