@@ -1,0 +1,388 @@
+/* Brand tokens from the Brand Kit */
+:root {
+  --violet: #3A3042;   /* Midnight Violet: text, buttons */
+  --clay:   #DB9D47;   /* Sunlit Clay: button hover */
+  --coral:  #FF784F;   /* Coral Glow: shirt image backgrounds, accents */
+  --peach:  #FFE19C;   /* Soft Peach: hero and footer background */
+  --white:  #FFFFFF;
+
+  --font-heading: "Alice", Georgia, "Times New Roman", serif;
+  --font-body: "Open Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+/* Base */
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--violet);
+  background: var(--white);
+}
+
+a { color: var(--violet); }
+
+/* Content width: 80px side margins on a 1440px screen, shrinking to 20px on phones */
+
+.container {
+  max-width: 1440px;
+  padding-inline: clamp(1.25rem, 5.56vw, 5rem);
+}
+
+:focus-visible {
+  outline: 3px solid var(--violet);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 2000;
+  padding: .5rem 1rem;
+  background: var(--violet);
+  color: var(--white);
+  border-radius: 2px;
+}
+.skip-link:focus { top: 1rem; }
+
+/* Image frame-coral box with the shirt centered inside */
+.img-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: .5rem;
+  background: var(--coral);
+  overflow: hidden;
+}
+.img-frame img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Header */
+.site-header {
+  background: var(--white);
+  padding-block: .25rem;
+  border-bottom: 2px solid var(--peach);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.site-header .navbar-brand {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  display: block;
+  height: 68px;
+  width: auto;
+}
+
+.site-header .navbar-nav { align-items: center; }
+
+.site-header .nav-link {
+  font-family: var(--font-body);
+  font-size: .875rem;          /* 14px */
+  font-weight: 700;
+  color: var(--violet);
+  background: transparent;
+  border: 0;
+  padding: .5rem .75rem;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link[aria-current="page"] {
+  background: transparent;
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.nav-cta { margin-inline-start: .5rem; }
+
+/* Mobile menu button (the ☰ icon) */
+.site-header .navbar-toggler { color: var(--violet); }
+
+/* Buttons */
+/* Used together with Bootstrap's "btn-solid theme-primary" classes */
+.btn-wh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--violet);
+  color: var(--white);
+  border: 2px solid var(--violet);
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color .15s, color .15s, border-color .15s;
+}
+
+.btn-wh:hover,
+.btn-wh:focus-visible {
+  background: var(--clay);
+  border-color: var(--clay);
+  color: var(--violet);
+}
+
+.btn-wh:active { background: var(--coral); border-color: var(--coral); }
+
+.btn-wh-sm { font-size: .875rem; padding: .6rem 1.1rem; }   /* 14px */
+.btn-wh-md { font-size: .875rem; padding: 1rem 1.75rem; }   /* 14px */
+.btn-wh-lg { font-size: 1.125rem; padding: .7rem 2.25rem; }  /* 18px */
+
+/* Home page sections */
+
+/* Hero */
+.hero {
+  background: var(--peach);
+  padding-block: 2.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "title  image"
+    "text   image"
+    "button image";
+  column-gap: 3rem;
+  align-items: start;
+}
+
+.hero-title {
+  grid-area: title;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(2.25rem, 4.4vw, 3.125rem);
+  line-height: 1.1;
+  color: var(--violet);
+  margin: .25rem 0 .5rem;
+}
+
+.nowrap { white-space: nowrap; }
+
+.hero-text {
+  grid-area: text;
+  font-size: 1rem;             /* 16px */
+  margin: 0 0 1.75rem;
+  max-width: 36rem;
+}
+
+.hero-btn { grid-area: button; justify-self: start; }
+
+.hero-img {
+  grid-area: image;
+  aspect-ratio: 16 / 9;
+}
+
+/* Section basics */
+.section { padding-block: 2.5rem; }
+#products.section { padding-bottom: 1rem; }
+
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 1.875rem;         /* 30px */
+  line-height: 1.2;
+  color: var(--violet);
+  margin: 0 0 1.5rem;
+}
+
+/* Product cards */
+.product-card { height: 100%; }
+
+.product-media {
+  display: flex;
+  aspect-ratio: 389 / 160;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* The View Tee button */
+.product-text { padding-top: .5rem; min-width: 0; }
+
+.product-name {
+  font-family: var(--font-body);
+  font-size: 1.25rem;          /* 20px */
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.product-price {
+  font-size: 1.125rem;         /* 18px */
+  font-weight: 400;
+  margin: .25rem 0 0;
+}
+
+/* About */
+.about { padding-top: 1.5rem; padding-bottom: 5rem; }
+
+.about-text {
+  font-size: 1.125rem;         /* 18px */
+  line-height: 1.7;
+  max-width: 38rem;
+  margin: 0 0 1rem;
+}
+
+.learn-more {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;             /* 16px */
+  font-weight: 700;
+  color: var(--violet);
+  cursor: pointer;
+}
+
+.learn-more:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Footer */
+.site-footer {
+  background: var(--peach);
+  color: var(--violet);
+  padding-block: 2rem 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 37.5% 34.5% 1fr;
+  grid-template-areas:
+    "brand links legal"
+    "brand copy  legal";
+  align-items: start;
+}
+
+.footer-brand {
+  grid-area: brand;
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo { display: block; height: 74px; width: auto; }
+
+.footer-tagline {
+  font-family: var(--font-heading);
+  font-size: .875rem;          /* 14px */
+  margin: .75rem 0 0;
+}
+
+.footer-links-col { grid-area: links; }
+.footer-legal-col { grid-area: legal; }
+
+.footer-heading {
+  font-family: var(--font-body);
+  font-size: 1rem;             /* 16px */
+  font-weight: 700;
+  margin: 0 0 .5rem;
+}
+
+.footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .35rem;
+}
+
+.footer-list li { min-width: 0; }
+
+.footer-list a {
+  color: var(--violet);
+  font-size: 1rem;             /* 16px */
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.footer-legal a { font-size: .875rem; }  /* 14px: the email */
+.footer-legal li:not(:last-child) a { font-size: 1rem; font-weight: 700; }  /* Privacy Policy and Terms: bold 16px */
+
+.footer-list a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.footer-copy {
+  grid-area: copy;
+  font-size: .75rem;           /* 12px */
+  margin: .5rem 0 0;
+}
+
+
+/* PHONE LAYOUT */
+@media (max-width: 767.98px) {
+  .brand-logo { height: 44px; }
+
+  /* Menu panel */
+  .site-header .nav-link { font-size: 1rem; padding: .75rem 0; }
+  .nav-cta { margin: 1rem 0 0; width: 100%; }
+  .nav-cta .btn-wh { width: 100%; }
+
+  /* Hero */
+  .hero { padding-block: 1.5rem 2rem; }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title"
+      "text"
+      "image"
+      "button";
+  }
+
+  .hero-title { font-size: 2rem; }
+  .hero-text { margin-bottom: 1.25rem; }
+  .hero-img { aspect-ratio: 16 / 10; margin-bottom: 0; }
+  .hero-btn { justify-self: stretch; margin-top: .5rem; }
+
+  /* Sections */
+  .section { padding-block: 1.5rem; }
+  #products.section { padding-bottom: 1rem; }
+  .section-title { font-size: 1.625rem; margin-bottom: 1rem; }
+
+  /* Product cards */
+  .product-media { aspect-ratio: 16 / 9; }
+  .product-info { flex-direction: column; align-items: stretch; gap: .75rem; }
+  .product-text { padding-top: .5rem; }
+  .product-name { font-size: 1.125rem; }
+  .product-info .btn-wh { width: 100%; }
+
+  .about { padding-top: 1rem; padding-bottom: 2rem; }
+  .about-text { font-size: 1rem; }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1.25fr .75fr;
+    grid-template-areas:
+      "brand links"
+      "legal links"
+      "copy  copy";
+    row-gap: 1.25rem;
+  }
+  .footer-logo { height: 56px; }
+  .footer-copy { margin-top: .5rem; }
+}
